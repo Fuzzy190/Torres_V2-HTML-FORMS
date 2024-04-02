@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <title>The Royal Feast</title>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.jpg" alt="logo">
+        <h1>The Royal Feast</h1>
+        <h2>A Culinary Journey Fit for Nobility</h2>
+        <p>Enjoy your royal feast!</p>
+    </div>
+
+    <form class="form-box">
+        <!--Name-->
+        <div class="form-row">
+            <label>Name: </label>
+            <input type="text" class="name">
+        </div>
+        <!--Email-->
+        <div class="form-row">
+            <label>Email: </label>
+            <input type="email" class="email">
+        </div>
+        <!--Age-->
+        <div class="form-row">
+            <label>Age: </label>
+            <input type="number" class="age">
+        </div>
+        <!--Type of Cuisine-->
+        <div id="dropdown">
+            <button class="dropdown-toggle">
+                <span>Type of Cuisine</span>
+                <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <ul class="menu">
+                <li class="menu-item"><a href="#">Italian</a></li>
+                <li class="menu-item"><a href="#">Chinese</a></li>
+                <li class="menu-item dropdown">
+                    <a href="#" class="submenu-toggle"> <!-- Added href="#" -->
+                        <span>Healthy Options</span>
+                        <i class="fa-solid fa-caret-right"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="#">Vegetarian</a></li> <!-- Added href="#" -->
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Mexican</a></li>
+                <li class="menu-item dropdown">
+                    <a href="#" class="submenu-toggle"> <!-- Added href="#" -->
+                        <span>Specials</span>
+                        <i class="fa-solid fa-caret-right"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li class="submenu-item"><a href="#">Royal Beef Wellington</a></li>
+                        <li class="submenu-item"><a href="#">King's Seafood Platter</a></li>
+                        <li class="submenu-item"><a href="#">Queen's Crown Rack of Lamb</a></li>
+                        <li class="submenu-item"><a href="#">Knight's Swordfish Steak</a></li>
+                        <li class="submenu-item"><a href="#">Maiden's Garden Risotto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Mode of Payment -->
+        <div class="form-row">
+            <label>Mode of Payment:</label>
+            <label><input type="radio" name="payment" class="payment" value="cash">Cash</label>
+            <label><input type="radio" name="payment" class="payment" value="credit">Credit Card</label>
+        </div>
+        <!-- DineIn/TakeOut -->
+        <div class="form-row">
+            <label><input type="radio" name="dine-take" class="dineIn" value="dine-in">Dine In</label>
+            <label><input type="radio" name="dine-take" class="takeOut" value="take-out">Take Out</label>
+        </div>
+        <!--Comments/Instruction-->
+        <div class="form-row">
+            <label>Comment: </label>
+            <textarea></textarea>
+        </div>
+        <p class="paraInstruction">Instructions: Write a 500-word comment</p> <!-- Corrected from 'comment word' to 'comment' -->
+        <!--OrderPlaced/Cancel(Button)-->
+        <div class="form-row">
+            <input type="button" value="Place Order" class="placeOrder">
+            <input type="button" value="Cancel Order" class="cancelOrder">
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
